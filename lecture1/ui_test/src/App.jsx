@@ -6,9 +6,15 @@ import Section04 from './components/sections/Section04/Section04'
 import Section05 from './components/sections/Section05/Section05'
 import Section06 from './components/sections/Section06/Section06'
 import Section07 from './components/sections/Section07/Section07'
+import Section08 from './components/sections/Section08/Section08'
 import Section09 from './components/sections/Section09/Section09'
 import Section10 from './components/sections/Section10/Section10'
 import Section11 from './components/sections/Section11/Section11'
+import Section12 from './components/sections/Section12/Section12'
+import Section13 from './components/sections/Section13/Section13'
+import Section14 from './components/sections/Section14/Section14'
+import Section15 from './components/sections/Section15/Section15'
+import Section16 from './components/sections/Section16/Section16'
 
 const sections = [
   { id: 'section-01', label: 'Section 01 — Button', component: <Section01 /> },
@@ -18,10 +24,15 @@ const sections = [
   { id: 'section-05', label: 'Section 05 — Checkbox', component: <Section05 /> },
   { id: 'section-06', label: 'Section 06 — Radio', component: <Section06 /> },
   { id: 'section-07', label: 'Section 07 — Slider', component: <Section07 /> },
+  { id: 'section-08', label: 'Section 08 — Modal', component: <Section08 /> },
   { id: 'section-09', label: 'Section 09 — Card', component: <Section09 /> },
   { id: 'section-10', label: 'Section 10 — Drag & Drop', component: <Section10 /> },
   { id: 'section-11', label: 'Section 11 — Scroll', component: <Section11 /> },
-  // Section 12 ~ 16 추가 예정
+  { id: 'section-12', label: 'Section 12 — Animation', component: <Section12 /> },
+  { id: 'section-13', label: 'Section 13 — Menu', component: <Section13 /> },
+  { id: 'section-14', label: 'Section 14 — Sidebar', component: <Section14 /> },
+  { id: 'section-15', label: 'Section 15 — Hover', component: <Section15 /> },
+  { id: 'section-16', label: 'Section 16 — Swipe', component: <Section16 /> },
 ]
 
 function App() {

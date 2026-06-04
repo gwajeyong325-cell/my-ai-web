@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Box, Typography, Paper, Chip } from '@mui/material'
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator'
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutlined'
 
 const INITIAL_ITEMS = [
   { id: '1', label: 'React 학습', emoji: '⚛️' },
