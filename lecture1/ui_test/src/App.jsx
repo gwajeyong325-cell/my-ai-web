@@ -15,6 +15,7 @@ import Section13 from './components/sections/Section13/Section13'
 import Section14 from './components/sections/Section14/Section14'
 import Section15 from './components/sections/Section15/Section15'
 import Section16 from './components/sections/Section16/Section16'
+import Section17 from './components/sections/Section17/Section17'
 
 const sections = [
   { id: 'section-01', label: 'Section 01 — Button', component: <Section01 /> },
@@ -33,6 +34,7 @@ const sections = [
   { id: 'section-14', label: 'Section 14 — Sidebar', component: <Section14 /> },
   { id: 'section-15', label: 'Section 15 — Hover', component: <Section15 /> },
   { id: 'section-16', label: 'Section 16 — Swipe', component: <Section16 /> },
+  { id: 'section-17', label: 'Section 17 — Flex Navigation', component: <Section17 /> },
 ]
 
 function App() {
