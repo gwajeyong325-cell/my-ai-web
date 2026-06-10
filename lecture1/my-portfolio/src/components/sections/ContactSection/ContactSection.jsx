@@ -59,7 +59,7 @@ function GuestbookEntry({ entry }) {
     <Box sx={{ py: 3, borderBottom: '1px solid rgba(0,0,0,0.07)' }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
         <Typography sx={{ fontSize: '1.1rem' }}>{entry.emoji_reaction || '💡'}</Typography>
-        <Typography variant="body2" sx={{ fontWeight: 600, color: '#111111' }}>
+        <Typography variant="body2" sx={{ fontWeight: 600, color: '#ffffff' }}>
           {entry.name || '익명'}
         </Typography>
         {entry.occupation && (
