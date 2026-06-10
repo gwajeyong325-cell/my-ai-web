@@ -1,0 +1,48 @@
+:root {
+  --color-primary:   #111111;
+  --color-secondary: #666666;
+
+  --color-bg-primary:   #ffffff;
+  --color-bg-secondary: #fafafa;
+  --color-bg-surface:   #f2f2f2;
+
+  --color-text-primary:   #111111;
+  --color-text-secondary: #666666;
+  --color-text-muted:     #aaaaaa;
+
+  --color-border:        rgba(0, 0, 0, 0.08);
+  --color-border-strong: rgba(0, 0, 0, 0.20);
+
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.10);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-secondary);
+}
