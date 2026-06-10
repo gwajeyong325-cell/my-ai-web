@@ -6,7 +6,7 @@ import ProjectsPage from './pages/ProjectsPage/ProjectsPage'
 
 export default function App() {
   return (
-    <BrowserRouter basename="/my-portfolio">
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
