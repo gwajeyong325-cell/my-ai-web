@@ -7,10 +7,7 @@ function AboutPage() {
       sx={{
         pt: '64px',
         minHeight: '100vh',
-        background: `
-          radial-gradient(ellipse at 20% 20%, rgba(26, 63, 160, 0.25) 0%, transparent 50%),
-          #050818
-        `,
+        background: '#f7f7f7',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -19,9 +16,9 @@ function AboutPage() {
       }}
     >
       <Box sx={{ maxWidth: 800, width: '100%' }}>
-        <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, mb: 3, color: '#E8520A' }}>
-          <PersonIcon />
-          <Typography variant="body2" sx={{ fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+        <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, mb: 3, color: '#aaaaaa' }}>
+          <PersonIcon sx={{ fontSize: 16 }} />
+          <Typography variant="body2" sx={{ fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#aaaaaa' }}>
             About Me
           </Typography>
         </Box>
@@ -32,9 +29,7 @@ function AboutPage() {
             fontSize: { xs: '2rem', md: '3rem' },
             fontWeight: 700,
             mb: 6,
-            background: 'linear-gradient(135deg, #FFFFFF 50%, #B0B8CC 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
+            color: '#111111',
           }}
         >
           About Me 페이지
@@ -43,11 +38,10 @@ function AboutPage() {
         <Card
           sx={{
             mb: 4,
-            borderRadius: 4,
-            background: 'rgba(13, 26, 92, 0.35)',
-            backdropFilter: 'blur(16px)',
-            border: '1px solid rgba(255,255,255,0.08)',
-            boxShadow: '0 8px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)',
+            borderRadius: 3,
+            backgroundColor: '#ffffff',
+            border: '1px solid rgba(0,0,0,0.08)',
+            boxShadow: '0 2px 20px rgba(0,0,0,0.06)',
           }}
         >
           <CardContent sx={{ p: { xs: 4, md: 6 } }}>
@@ -56,19 +50,21 @@ function AboutPage() {
               size="small"
               sx={{
                 mb: 3,
-                borderRadius: 2,
-                background: 'linear-gradient(90deg, #E8520A 0%, #F4A24D 100%)',
-                color: '#FFFFFF',
+                borderRadius: 1,
+                backgroundColor: '#111111',
+                color: '#ffffff',
                 fontWeight: 600,
+                fontSize: '0.72rem',
+                letterSpacing: '0.05em',
               }}
             />
-            <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 600, color: '#FFFFFF', mb: 2 }}>
+            <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 600, color: '#111111', mb: 2 }}>
               About Me 페이지가 개발될 공간입니다.
             </Typography>
-            <Typography variant="body1" sx={{ color: '#B0B8CC', lineHeight: 2 }}>
+            <Typography variant="body1" sx={{ color: '#666666', lineHeight: 2 }}>
               상세한 자기소개가 들어갈 예정입니다.
             </Typography>
-            <Typography variant="body2" sx={{ color: '#6B7899', mt: 2, fontStyle: 'italic' }}>
+            <Typography variant="body2" sx={{ color: '#aaaaaa', mt: 2, fontStyle: 'italic' }}>
               경력 타임라인, 상세 기술 스택, 취미·관심사, 자기소개 에세이 등이 이 페이지를 채울 예정입니다.
             </Typography>
           </CardContent>
@@ -77,13 +73,12 @@ function AboutPage() {
         <Box
           sx={{
             p: 3,
-            borderRadius: 3,
-            border: '1px dashed rgba(232, 82, 10, 0.3)',
-            background: 'rgba(232, 82, 10, 0.04)',
-            backdropFilter: 'blur(8px)',
+            borderRadius: 2,
+            border: '1px dashed rgba(0,0,0,0.15)',
+            background: '#fafafa',
           }}
         >
-          <Typography variant="body2" sx={{ color: '#F4A24D', fontWeight: 500 }}>
+          <Typography variant="body2" sx={{ color: '#aaaaaa', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', mb: 1.5 }}>
             예정 콘텐츠
           </Typography>
           <Box component="ul" sx={{ mt: 1, pl: 2 }}>
@@ -95,7 +90,7 @@ function AboutPage() {
               '다운로드 가능한 이력서',
             ].map((item) => (
               <li key={item}>
-                <Typography variant="body2" sx={{ color: '#B0B8CC', mb: 0.5 }}>
+                <Typography variant="body2" sx={{ color: '#666666', mb: 0.5 }}>
                   {item}
                 </Typography>
               </li>

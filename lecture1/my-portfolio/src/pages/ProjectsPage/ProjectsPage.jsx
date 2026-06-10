@@ -7,10 +7,7 @@ function ProjectsPage() {
       sx={{
         pt: '64px',
         minHeight: '100vh',
-        background: `
-          radial-gradient(ellipse at 80% 20%, rgba(26, 63, 160, 0.2) 0%, transparent 50%),
-          #050818
-        `,
+        background: '#f2f2f2',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -19,9 +16,9 @@ function ProjectsPage() {
       }}
     >
       <Box sx={{ maxWidth: 1000, width: '100%' }}>
-        <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, mb: 3, color: '#E8520A' }}>
-          <FolderSpecialIcon />
-          <Typography variant="body2" sx={{ fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+        <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, mb: 3, color: '#aaaaaa' }}>
+          <FolderSpecialIcon sx={{ fontSize: 16 }} />
+          <Typography variant="body2" sx={{ fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#aaaaaa' }}>
             Projects
           </Typography>
         </Box>
@@ -32,9 +29,7 @@ function ProjectsPage() {
             fontSize: { xs: '2rem', md: '3rem' },
             fontWeight: 700,
             mb: 6,
-            background: 'linear-gradient(135deg, #FFFFFF 50%, #B0B8CC 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
+            color: '#111111',
           }}
         >
           Projects 페이지
@@ -43,11 +38,10 @@ function ProjectsPage() {
         <Card
           sx={{
             mb: 6,
-            borderRadius: 4,
-            background: 'rgba(13, 26, 92, 0.35)',
-            backdropFilter: 'blur(16px)',
-            border: '1px solid rgba(255,255,255,0.08)',
-            boxShadow: '0 8px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)',
+            borderRadius: 3,
+            backgroundColor: '#ffffff',
+            border: '1px solid rgba(0,0,0,0.08)',
+            boxShadow: '0 2px 20px rgba(0,0,0,0.06)',
           }}
         >
           <CardContent sx={{ p: { xs: 4, md: 6 } }}>
@@ -56,25 +50,27 @@ function ProjectsPage() {
               size="small"
               sx={{
                 mb: 3,
-                borderRadius: 2,
-                background: 'linear-gradient(90deg, #E8520A 0%, #F4A24D 100%)',
-                color: '#FFFFFF',
+                borderRadius: 1,
+                backgroundColor: '#111111',
+                color: '#ffffff',
                 fontWeight: 600,
+                fontSize: '0.72rem',
+                letterSpacing: '0.05em',
               }}
             />
-            <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 600, color: '#FFFFFF', mb: 2 }}>
+            <Typography variant="h2" sx={{ fontSize: '1.5rem', fontWeight: 600, color: '#111111', mb: 2 }}>
               Projects 페이지가 개발될 공간입니다.
             </Typography>
-            <Typography variant="body1" sx={{ color: '#B0B8CC', lineHeight: 2 }}>
+            <Typography variant="body1" sx={{ color: '#666666', lineHeight: 2 }}>
               포트폴리오 작품들이 들어갈 예정입니다.
             </Typography>
-            <Typography variant="body2" sx={{ color: '#6B7899', mt: 2, fontStyle: 'italic' }}>
+            <Typography variant="body2" sx={{ color: '#aaaaaa', mt: 2, fontStyle: 'italic' }}>
               필터링, 카테고리, 상세 모달, 라이브 데모 링크 등이 추가될 예정입니다.
             </Typography>
           </CardContent>
         </Card>
 
-        <Typography variant="body2" sx={{ color: '#6B7899', mb: 3, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+        <Typography variant="body2" sx={{ color: '#aaaaaa', mb: 3, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
           프로젝트 슬롯 미리보기
         </Typography>
 
@@ -84,10 +80,9 @@ function ProjectsPage() {
               <Box
                 sx={{
                   height: 200,
-                  borderRadius: 4,
-                  border: '1px dashed rgba(255,255,255,0.10)',
-                  background: 'rgba(13, 26, 92, 0.2)',
-                  backdropFilter: 'blur(8px)',
+                  borderRadius: 3,
+                  border: '1px dashed rgba(0,0,0,0.15)',
+                  background: '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -95,15 +90,15 @@ function ProjectsPage() {
                   gap: 1,
                   transition: 'border-color 0.25s ease, box-shadow 0.25s ease',
                   '&:hover': {
-                    borderColor: 'rgba(232, 82, 10, 0.35)',
-                    boxShadow: '0 0 20px rgba(232, 82, 10, 0.08)',
+                    borderColor: 'rgba(0,0,0,0.35)',
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
                   },
                 }}
               >
-                <Typography variant="body2" sx={{ color: '#6B7899' }}>
+                <Typography variant="body2" sx={{ color: '#aaaaaa' }}>
                   프로젝트 {n}
                 </Typography>
-                <Typography variant="caption" sx={{ color: 'rgba(107, 120, 153, 0.5)', fontStyle: 'italic' }}>
+                <Typography variant="caption" sx={{ color: '#cccccc', fontStyle: 'italic' }}>
                   작품 추가 예정
                 </Typography>
               </Box>
