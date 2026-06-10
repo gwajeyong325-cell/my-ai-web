@@ -141,11 +141,16 @@ function ContactSection() {
   const inputSx = {
     '& .MuiOutlinedInput-root': {
       borderRadius: 0,
-      '& fieldset': { borderColor: 'rgba(0,0,0,0.12)' },
-      '&:hover fieldset': { borderColor: 'rgba(0,0,0,0.3)' },
-      '&.Mui-focused fieldset': { borderColor: '#111111' },
+      backgroundColor: '#1e1e1e',
+      color: '#ffffff',
+      '& fieldset': { borderColor: 'rgba(255,255,255,0.15)' },
+      '&:hover fieldset': { borderColor: 'rgba(255,255,255,0.4)' },
+      '&.Mui-focused fieldset': { borderColor: 'rgba(255,255,255,0.8)' },
+      '& input': { color: '#ffffff' },
+      '& textarea': { color: '#ffffff' },
     },
-    '& .MuiInputLabel-root.Mui-focused': { color: '#111111' },
+    '& .MuiInputLabel-root': { color: 'rgba(255,255,255,0.4)' },
+    '& .MuiInputLabel-root.Mui-focused': { color: 'rgba(255,255,255,0.8)' },
   }
 
   return (
@@ -327,8 +332,6 @@ function ContactSection() {
                 fullWidth
                 size="small"
                 sx={inputSx}
-                InputProps={{ sx: { color: '#111111', backgroundColor: '#ffffff' } }}
-                InputLabelProps={{ sx: { color: '#888888' } }}
               />
               <TextField
                 name="message"
@@ -340,8 +343,6 @@ function ContactSection() {
                 multiline
                 rows={4}
                 sx={inputSx}
-                InputProps={{ sx: { color: '#111111', backgroundColor: '#ffffff' } }}
-                InputLabelProps={{ sx: { color: '#888888' } }}
               />
 
               {error && (
@@ -402,8 +403,6 @@ function ContactSection() {
                     fullWidth
                     size="small"
                     sx={inputSx}
-                    InputProps={{ sx: { color: '#111111', backgroundColor: '#ffffff' } }}
-                    InputLabelProps={{ sx: { color: '#888888' } }}
                   />
                   <TextField
                     name="social_link"
@@ -414,8 +413,6 @@ function ContactSection() {
                     fullWidth
                     size="small"
                     sx={inputSx}
-                    InputProps={{ sx: { color: '#111111', backgroundColor: '#ffffff' } }}
-                    InputLabelProps={{ sx: { color: '#888888' } }}
                   />
                   <TextField
                     name="occupation"
@@ -426,8 +423,6 @@ function ContactSection() {
                     fullWidth
                     size="small"
                     sx={inputSx}
-                    InputProps={{ sx: { color: '#111111', backgroundColor: '#ffffff' } }}
-                    InputLabelProps={{ sx: { color: '#888888' } }}
                   />
                   <FormControl fullWidth size="small">
                     <Select
@@ -437,11 +432,12 @@ function ContactSection() {
                       displayEmpty
                       sx={{
                         borderRadius: 0,
-                        color: form.source ? '#111111' : '#888888',
-                        backgroundColor: '#ffffff',
-                        '& .MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(0,0,0,0.12)' },
-                        '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(0,0,0,0.3)' },
-                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#111111' },
+                        backgroundColor: '#1e1e1e',
+                        color: form.source ? '#ffffff' : 'rgba(255,255,255,0.4)',
+                        '& .MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(255,255,255,0.15)' },
+                        '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(255,255,255,0.4)' },
+                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(255,255,255,0.8)' },
+                        '& .MuiSvgIcon-root': { color: 'rgba(255,255,255,0.5)' },
                       }}
                     >
                       <MenuItem value="" disabled sx={{ color: '#888888' }}>
