@@ -1,0 +1,6 @@
+[submodule "lecture1/mini_sns"]
+	path = lecture1/mini_sns
+	url = https://github.com/gwajeyong325-cell/mini-sns.git
+[submodule "lecture1/my-community"]
+	path = lecture1/my-community
+	url = https://github.com/gwajeyong325-cell/my-community.git
