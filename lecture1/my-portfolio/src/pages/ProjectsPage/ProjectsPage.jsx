@@ -1,19 +1,11 @@
-import { useState, useEffect } from 'react'
-import {
-  Box,
-  Typography,
-  Chip,
-  Grid,
-  Button,
-  Skeleton,
-  Alert,
-} from '@mui/material'
-import FolderSpecialIcon from '@mui/icons-material/FolderSpecial'
-import OpenInNewIcon from '@mui/icons-material/OpenInNew'
-import BrushIcon from '@mui/icons-material/Brush'
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
-import PersonIcon from '@mui/icons-material/Person'
-import { supabase } from '../../lib/supabaseClient'
+import { useState } from 'react'
+import { Box, Typography, Chip, Grid, Button, Skeleton, Alert } from '@mui/material'
+import FolderSpecialIcon  from '@mui/icons-material/FolderSpecial'
+import OpenInNewIcon      from '@mui/icons-material/OpenInNew'
+import BrushIcon          from '@mui/icons-material/Brush'
+import CalendarTodayIcon  from '@mui/icons-material/CalendarToday'
+import PersonIcon         from '@mui/icons-material/Person'
+import { usePortfolio }   from '../../context/PortfolioContext'
 
 function ThumbnailImage({ src, alt }) {
   const [status, setStatus] = useState('loading')
@@ -197,19 +189,7 @@ function ProjectCard({ project, featured = false }) {
               href={project.detail_url}
               target="_blank"
               rel="noopener noreferrer"
-              sx={{
-                backgroundColor: '#111111',
-                color: '#ffffff',
-                borderRadius: 1,
-                fontSize: '0.78rem',
-                fontWeight: 600,
-                letterSpacing: '0.04em',
-                px: 2,
-                py: 0.75,
-                boxShadow: 'none',
-                '&:hover': { backgroundColor: '#333333', boxShadow: 'none' },
-                minHeight: 44,
-              }}
+              sx={{ minHeight: 36 }}
             >
               View Details
             </Button>
@@ -222,18 +202,7 @@ function ProjectCard({ project, featured = false }) {
               href={project.figma_url}
               target="_blank"
               rel="noopener noreferrer"
-              sx={{
-                borderColor: 'rgba(0,0,0,0.25)',
-                color: '#444444',
-                borderRadius: 1,
-                fontSize: '0.78rem',
-                fontWeight: 600,
-                letterSpacing: '0.04em',
-                px: 2,
-                py: 0.75,
-                '&:hover': { borderColor: '#111111', color: '#111111', backgroundColor: 'transparent' },
-                minHeight: 44,
-              }}
+              sx={{ minHeight: 36 }}
             >
               Prototype
             </Button>
@@ -282,30 +251,10 @@ function CardSkeleton({ featured = false }) {
 }
 
 function ProjectsPage() {
-  const [projects, setProjects] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    async function fetchProjects() {
-      const { data, error } = await supabase
-        .from('projects')
-        .select('*')
-        .eq('is_published', true)
-        .order('sort_order', { ascending: true })
-
-      if (error) {
-        setError('프로젝트를 불러오는 중 오류가 발생했습니다.')
-      } else {
-        setProjects(data || [])
-      }
-      setLoading(false)
-    }
-    fetchProjects()
-  }, [])
+  const { projects, projectsLoading: loading, projectsError: error } = usePortfolio()
 
   const featured = projects.find((p) => p.is_featured)
-  const rest = projects.filter((p) => !p.is_featured)
+  const rest     = projects.filter((p) => !p.is_featured)
 
   return (
     <Box

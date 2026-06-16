@@ -47,24 +47,42 @@ const theme = createTheme({
       },
     },
     MuiButton: {
+      defaultProps: {
+        disableElevation: true,
+      },
       styleOverrides: {
+        root: {
+          borderRadius: 8,
+          textTransform: 'none',
+          fontWeight: 600,
+          letterSpacing: '0.02em',
+          boxShadow: 'none',
+          '&:hover': { boxShadow: 'none' },
+        },
+        sizeLarge: {
+          paddingLeft: 40,
+          paddingRight: 40,
+          paddingTop: 12,
+          paddingBottom: 12,
+          fontSize: '0.95rem',
+        },
+        sizeSmall: {
+          paddingLeft: 16,
+          paddingRight: 16,
+          paddingTop: 5,
+          paddingBottom: 5,
+          fontSize: '0.78rem',
+        },
         containedPrimary: {
           backgroundColor: '#111111',
           color: '#ffffff',
-          fontWeight: 600,
-          boxShadow: 'none',
-          '&:hover': {
-            backgroundColor: '#000000',
-            boxShadow: 'none',
-          },
+          '&:hover': { backgroundColor: '#000000', boxShadow: 'none' },
+          '&.Mui-disabled': { backgroundColor: 'rgba(0,0,0,0.12)', color: 'rgba(0,0,0,0.26)' },
         },
         outlinedPrimary: {
           borderColor: 'rgba(0, 0, 0, 0.25)',
           color: '#111111',
-          '&:hover': {
-            backgroundColor: 'rgba(0, 0, 0, 0.04)',
-            borderColor: '#111111',
-          },
+          '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.04)', borderColor: '#111111' },
         },
       },
     },

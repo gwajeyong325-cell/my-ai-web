@@ -292,7 +292,6 @@ function ContactSection() {
               variant="outlined"
               onClick={() => setSubmitted(false)}
               sx={{
-                borderRadius: 0,
                 borderColor: 'rgba(255,255,255,0.2)',
                 color: '#ffffff',
                 '&:hover': { borderColor: '#ffffff', backgroundColor: 'transparent' },
@@ -456,15 +455,14 @@ function ContactSection() {
                 disabled={submitting}
                 sx={{
                   mt: 1,
-                  borderRadius: 0,
                   backgroundColor: '#ffffff',
                   color: '#111111',
-                  fontWeight: 600,
                   letterSpacing: '0.1em',
                   py: 1.5,
                   fontSize: '0.8rem',
+                  textTransform: 'uppercase',
                   '&:hover': { backgroundColor: '#f0f0f0' },
-                  '&:disabled': { backgroundColor: 'rgba(255,255,255,0.3)', color: '#888888' },
+                  '&.Mui-disabled': { backgroundColor: 'rgba(255,255,255,0.3)', color: '#888888' },
                 }}
               >
                 {submitting ? '전송 중...' : 'LEAVE A NOTE'}
