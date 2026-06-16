@@ -4,3 +4,6 @@
 [submodule "lecture1/my-community"]
 	path = lecture1/my-community
 	url = https://github.com/gwajeyong325-cell/my-community.git
+[submodule "lecture1/anispot"]
+	path = lecture1/anispot
+	url = https://github.com/gwajeyong325-cell/anispot.git
